@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextComparer", "TextComparer\TextComparer.csproj", "{23727342-3567-484C-A2E8-3154FF6020CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextComparerConsole", "TextComparerConsole\TextComparerConsole.csproj", "{867B53A1-3FFE-4B59-B52D-23487F73B087}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23727342-3567-484C-A2E8-3154FF6020CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23727342-3567-484C-A2E8-3154FF6020CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23727342-3567-484C-A2E8-3154FF6020CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23727342-3567-484C-A2E8-3154FF6020CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867B53A1-3FFE-4B59-B52D-23487F73B087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867B53A1-3FFE-4B59-B52D-23487F73B087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867B53A1-3FFE-4B59-B52D-23487F73B087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867B53A1-3FFE-4B59-B52D-23487F73B087}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40979BD3-CFFE-454E-B6FF-B8E72B552A45}
+	EndGlobalSection
+EndGlobal
