@@ -14,6 +14,7 @@ namespace TextComparerConsole
             {
                 Console.WriteLine("Shows the difference of 2 strings with 2 html-pages");
                 Console.WriteLine("Usage: TextComparerConsole string1 string2 HTMLfilePath1 HTMLfilePath2");
+                Console.WriteLine("Example: TextComparerConsole \"Cow Pig Chicken\" \"Cow Horse Chicken\" D:\\diff1.html D:\\diff2.html");  
                 return;
             }
 
@@ -34,24 +35,42 @@ namespace TextComparerConsole
                 string htmlString2 = string.Empty;
                 UtilDiffExtra.DiffCommonList2MarkedUpStrings(differenceList, ref htmlString1, ref htmlString2);
 
-                WriteTextToFile(htmlString1, htmlFilePath1);
-                WriteTextToFile(htmlString2, htmlFilePath2);
+                WriteTextToHtmlFile(htmlString1, htmlFilePath1);
+                WriteTextToHtmlFile(htmlString2, htmlFilePath2);
                
                 
             }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private static void WriteTextToHtmlFile(string text, string filePath)
+        {
+            string extension = Path.GetExtension(filePath);
+
+            if (!String.Equals(extension, ".html", StringComparison.OrdinalIgnoreCase))
+            {
+                string message = string.Format("{0} does not have the extension .html", filePath);
+                throw new Exception(message);
+            }
+
+            try
+            {
+                using (StreamWriter writer = File.CreateText(filePath))
+                {
+                    writer.Write(text);
+                }
+            }
             catch
             {
-
+                string message = string.Format("Problem writing to {0}", filePath);
+                throw new Exception(message);
             }
         }
-
-        private static void WriteTextToFile(string text, string filePath)
-        {
-            using (StreamWriter writer = File.CreateText(filePath))
-            {
-                writer.Write(text);
-            }
-        }
-
     }
+
+   
+
 }
